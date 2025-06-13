@@ -7,14 +7,22 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: "lh3.googleusercontent.com",
+                protocol: 'https',
+                hostname: 'lh3.googleusercontent.com',
+                pathname: '/**',
             },
             {
-                hostname: "avatars.githubusercontent.com",
+                protocol: 'https',
+                hostname: 'avatars.githubusercontent.com',
+                pathname: '/**',
             },
+            /*
             {
+                protocol: 'https',
                 hostname: process.env.NEXT_SUPABASE_IMAGE_REMOTE_PATTERN,
+                pathname: '/**',
             },
+            */
         ],
     },
 };
