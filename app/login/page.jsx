@@ -67,9 +67,8 @@ export default function LoginPage() {
                 <div className="mt-6 text-center">
                     <form action="" className="space-y-3">
                         <button
-                            type="submit"
-                            name="provider"
-                            value="google"
+                            type="button"
+                            onClick={() => signIn("google")}
                             className="w-full bg-white text-gray-800 border border-gray-300 py-2 px-4 rounded-md flex items-center justify-center gap-2 shadow hover:bg-gray-50 transition"
                         >
                             <Image
@@ -80,6 +79,7 @@ export default function LoginPage() {
                             />
                             使用 Google 登入
                         </button>
+                        
                         <button
                             type="submit"
                             name="provider"
@@ -100,7 +100,7 @@ export default function LoginPage() {
         </div>
     );
 }
-
+console.log("Prisma 連線：", process.env.DATABASE_URL);
 function InputField({ label, name, type, value, onChange }) {
     return (
         <div>
